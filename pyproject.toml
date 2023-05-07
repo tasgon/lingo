@@ -1,20 +1,20 @@
-[tool.pdm]
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "ipykernel>=6.22.0",
-]
-[project]
-name = ""
-version = ""
+[tool.poetry]
+name = "lingo"
+version = "0.1.0"
 description = ""
-authors = [
-    {name = "tas", email = "me@tas.sh"},
-]
-dependencies = [
-    "torch>=2.0.0",
-    "transformers>=4.28.1",
-    "sentence-transformers>=2.2.2",
-]
-requires-python = ">=3.9"
-license = {text = "MPL-2.0"}
+authors = ["tas <me@tas.sh>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^2.0.0"
+transformers = "^4.28.1"
+sentence-transformers = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.22.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
